@@ -1,17 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <h2 id="mensajeH2" #mensajeH2>Welcome to Ionic!</h2>    
+    <p>
+        This starter project comes with simple tabs-based layout for apps
+        that are going to primarily use a Tabbed UI.
+    </p>
+    <div>
+        <button class="button-block" ion-button (click)="metodoVacioSinParametros();">Metodo Void sin parametros</button>      
+        <button class="button-block" ion-button color="secondary" (click)="metodoVacioConParamentros(mensajeH2,'dato nuevo');">Metodo Void con parametros</button>
+        <button class="button-block" ion-button color="danger">Metodo Void sin parametros <br/>{{variableGlabal}}</button>             
+    </div>
+    <div>
+        <hr/>
+        <!-- PARA EVENTOS DE MOUSE ADICIONALES REVISAR ng-mouse de angular 1!-->
+        <div class="content" (mousemove) ="ratonSobre('div a')">
+            <h2>Div A</h2>
+        </div> 
+    </div>
+    <p>
+        Take a look at the <code>src/pages/</code> directory to add or change tabs,
+        update any existing page or create new pages.
+    </p>
 </ion-content>
