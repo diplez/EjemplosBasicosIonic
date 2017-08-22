@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {ChatWidget} from './inyectable/chat-Widget';
 
 @Component({
   selector: 'page-about',
@@ -7,7 +8,11 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  datoPasaInyectable = this.chatWidget.chatSocket.encryption;
+  datoStringInyectable = this.chatWidget.authWidget.datoString;
+  //dato = ChatWidget.authWidget.dato;
+
+  constructor(public navCtrl: NavController,private chatWidget: ChatWidget) {
 
   }
 

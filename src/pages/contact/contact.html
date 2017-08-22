@@ -11,7 +11,16 @@
     <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
       <ion-icon name="ionic" item-left></ion-icon>
+      
+      <!-- PARA CONFIGURAR @INPUT SE HACE  datoInputDecorador1 NOMBRE DE INPUT COLOCADO EN CLASE pruebaInput!-->
+      <!-- PARA CONFIGURAR @INPUT SE HACE  varInput NOMBRE DE VARIABLE COLOCADO EN CLASE contact!-->
+      <message [datoInputDecorador1]="varInput"></message>
+      <!--<page-home [datoInputDecorador]="varHomeInput"></page-home>-->
       @ionicframework
+      <import></import>
+      <!-- native-transitions native-transitions-options="{type: 'flip', direction:'right'}" !-->      
+      <button ion-button color="danger" outline (click)='navSegunda()'>SECUNDA PAGINA</button><br/>
+      <button ion-button color="dark" outline (click)='navTercer()'>TERCER PAGINA</button>
     </ion-item>
   </ion-list>
 </ion-content>
