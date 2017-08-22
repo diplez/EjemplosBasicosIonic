@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {OnInit} from '@angular/core';
 import * as $ from 'jquery';
@@ -12,7 +12,10 @@ declare var $: any;
 })
 export class HomePage implements OnInit { //OnInit SE INICIALIZA AL ABRIR PAGINA
 
+    @Input() datoInputDecorador: string;
+    
     public variableGlabal: string;
+    heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
 
     constructor(public navCtrl: NavController) {
         this.metodoUsandoJqueryJS(); // SE INICIALIZA METODO EN CONSTRUCTOR PARA EJECUCION DIRECTA
@@ -22,7 +25,7 @@ export class HomePage implements OnInit { //OnInit SE INICIALIZA AL ABRIR PAGINA
     // SE INICIA AL ABRIR PAGINA USADO MAS PARA PROCESOS GRANDES
     // MAS ACERCA DE ESTOS METODOS EN DOCUMENTACION
     ngOnInit(): void {
-        console.log("Metodo ngOnInit SE CARGA AL EJECUTAR PAGINA");
+        console.log("Metodo ngOnInit SE CARGA AL EJECUTAR PAGINA CON MENSAJE DE INPUT DECORADOR: ");
     }
 
     metodoVacioSinParametros(): void {

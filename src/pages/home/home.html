@@ -4,7 +4,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding >
     <h2 id="mensajeH2" #mensajeH2>Welcome to Ionic!</h2>    
     <p>
         This starter project comes with simple tabs-based layout for apps
@@ -26,4 +26,8 @@
         Take a look at the <code>src/pages/</code> directory to add or change tabs,
         update any existing page or create new pages.
     </p>
+    
+    <!-- ESTRUCTURA PARA UTILIZAR FOR CON EJEMPLO DE ARREGLO SIMILAR A FOREACH 1!-->
+    <h2>Listas Utilizando For</h2>
+     <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>         
 </ion-content>
